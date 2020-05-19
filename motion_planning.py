@@ -181,7 +181,7 @@ class MotionPlanning(Drone):
         # TODO: prune path to minimize number of waypoints
         # TODO (if you're feeling ambitious): Try a different approach altogether!
         print('Pruning path')
-        path = line_of_sigth_smoothing(grid, path)
+        path = line_of_sigth_smoothing(grid, path, greedy=False)
         print(f'Plan Number of Waypoints {len(path)}')
 
         # Convert path to waypoints
